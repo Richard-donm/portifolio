@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio</title>
+</head><body>
+    <div class="particulas"></div><nav class="navegacao">
+    <ul class="menu">
+        <li><a href="#inicio" class="menu-link">Início</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre </a></li>
+        <li><a href="#projetos" class="menu-link">Projetos </a></li>
+        <li><a href="#cursos" class="menu-link">Cursos </a></li>
+        <li><a href="#contatos" class="menu-link">Contatos </a></li>
+    </ul>
+</nav>
+
+<main id="inicio" class="cabecalho">
+    <img src="img/perfil .jpg" alt="Foto Richard" class="foto-perfil">
+    <h1>Richard Gonçalves</h1>
+    <p class="cabecalho-sub-titulo">Desenvolvedor Front-End</p>
+</main>
+
+<section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Sobre mim</h2>
+    <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+            Oi! Eu sou desenvolvedor Front-End e adoro dar vida a ideias por meio de interfaces bonitas, funcionais
+            e acessíveis. Curto bastante trabalhar com HTML, CSS, JavaScript e React — sempre com atenção à
+            responsividade, usabilidade e performance. Gosto mesmo é de criar experiências que façam sentido para
+            quem usa. Valorizo ambientes colaborativos, onde dá pra trocar conhecimento e crescer junto com o time.
+            Estou sempre buscando aprender algo novo, experimentar ferramentas diferentes e evoluir como
+            desenvolvedor e como pessoa. Acredito que a tecnologia tem o poder de conectar pessoas, e meu papel é
+            fazer essa ponte ser simples, fluida e agradável.
+        </p>
+    </div>
+</section>
+
+<section id="projetos" class="projetos">
+    <h2 class="projetos-titulos">Meus projetos</h2>
+    <div class="projetos-caixa">
+        <div class="projetos-card">
+            <img src="img/calculadora-imc.png" alt="Projeto 1" class="projetos-imagem">
+            <div class="caixa-textos-projetos">
+                <h3 class="info-projetos">Calculadora IMC</h3>
+                <p class="paragrafo-projetos">Uma calculadora para cuidar do seu bem estar, simples e eficiente!</p>
+            </div>
+        </div>
+
+        <div class="projetos-card">
+            <img src="img/tela_de_login.png" alt="Tela de Login" class="projetos-imagem">
+            <h3 class="info-projetos">Tela de Login</h3>
+            <p class="paragrafo-projetos">Uma tela de Login para uma troca de experiências</p>
+        </div>
+    </div>
+</section>
+
+<section id="cursos" class="cursos">
+    <h2 class="cursos-titulo">Cursos Complementares</h2>
+    <ul class="cursos-lista">
+        <li>JavaScript para Web: Crie Páginas Dinâmicas – Alura (20h) – 2024</li>
+        <li>Introdução ao Desenvolvimento Front-End com React – Digital Innovation One (16h) – 2024</li>
+        <li>Lógica de Programação Essencial – Fundação Bradesco (15h) – 2023</li>
+        <li>Banco de Dados SQL – Fundamentos – Udemy (12h) – 2023</li>
+        <li>Versionamento de Código com Git e GitHub – Alura (8h) – 2024</li>
+        <li>Desenvolvimento Web com HTML5 e CSS3 – Curso em Vídeo (40h) – 2023</li>
+        <li>Python para Análise de Dados – DIO / Santander Bootcamp (20h) – 2024</li>
+        <li>Fundamentos de Back-End com Node.js – Alura (18h) – 2024</li>
+    </ul>
+</section>
+
+<section id="contatos" class="contatos">
+    <h2 class="contatos-titulos">Entre em contato</h2>
+
+    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+        <div class="grupo-form">
+            <input placeholder="Nome" class="campo-form" id="nome">
+        </div>
+
+        <div class="grupo-form">
+            <textarea class="campo-form" placeholder="Digite sua mensagem" rows="3" id="mensagem"></textarea>
+        </div>
+
+        <button type="submit" class="botao-form">Enviar WhatsApp</button>
+    </form>
+</section>
+
+<script>
+    function enviarWhats(event) {
+        event.preventDefault();
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+        const telefone = '5511962827466';
+        const texto = Olá, Me chamo ${nome}, ${mensagem};
+        const msgFormatada = encodeURIComponent(texto);
+        const url = https://wa.me/${telefone}/?text=${msgFormatada};
+        window.open(url, '_blank');
+    }
+</script>
+
+</body></html>
